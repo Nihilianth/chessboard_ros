@@ -1,0 +1,10 @@
+<launch>
+
+<node pkg="rosshell" type="rosshellX.py" name="stockfish">
+    <param name="command" type="String" value="stockfish"/>
+    <param name="stderr" type="String" value="stockfish/stderr"/>
+    <param name="stdout" type="String" value="stockfish/stdout"/>
+    <param name="stdin" type="String" value="stockfish/stdin"/>
+</node>
+
+</launch>

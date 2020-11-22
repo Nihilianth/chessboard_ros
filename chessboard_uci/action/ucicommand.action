@@ -1,0 +1,23 @@
+#goal
+#geometry_msgs/Point source
+#geometry_msgs/Point destination
+#uint8 src_x
+#uint8 src_y
+#uint8 dest_x
+#uint8 dest_y
+
+std_msgs/String move
+std_msgs/String tf_name
+uint8 CMD_INIT = 0
+uint8 CMD_NEWGAME = 1
+uint8 CMD_MOVE = 2
+uint8 CMD_CALC_MOVE = 3
+uint8 cmd
+---
+#result 
+std_msgs/String result
+geometry_msgs/Point source
+geometry_msgs/Point destination
+---
+#feedback
+std_msgs/String feedback

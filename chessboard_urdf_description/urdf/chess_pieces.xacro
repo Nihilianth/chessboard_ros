@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<robot name="chessboard_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<!-- Add chess piece meshes (spawned in the corner by default) -->
+
+<xacro:macro name="piece_add" params="name mesh_file side">
+  <link name="${name}">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-8.326672684688674e-17 0.008603689205023293 5.551115123125783e-17"/>
+      <mass value="0.016569943572376844"/>
+      <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <xacro:if value="${side == 'white'}">
+        <origin rpy="0 0 0" xyz="-0.25 -0.01 -0.25"/>
+        <material name="white">
+        <color rgba="1.0 1.0 1.0 1.000"/>
+        </material>
+      </xacro:if>
+      <xacro:if value="${side == 'black'}">
+        <origin rpy="0 0 0" xyz="-0.25 -0.01 -0.25"/>
+        <material name="black">
+        <color rgba="0.2 0.2 0.2 1.000"/>
+        </material>
+      </xacro:if>
+      <geometry>
+        <mesh filename="package://chessboard_urdf_description/${mesh_file}" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.25 -0.01 -0.25"/>
+      <geometry>
+        <mesh filename="package://chessboard_urdf_description/${mesh_file}" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="Rigid${name}" type="fixed">
+    <origin rpy="0 0 0" xyz="0.25 0.25 -0.01"/>
+    <parent link="base_link"/>
+    <child link="${name}"/>
+  </joint>
+</xacro:macro>
+
+<xacro:macro name="add_piece_loop" params="base_name count side mesh_file iter:=0">
+
+    <xacro:piece_add name="${base_name}_${iter}_${side}" mesh_file="${mesh_file}" side="${side}"/>
+
+    <xacro:if value="${count-1}">
+        <xacro:add_piece_loop base_name="${base_name}" side="${side}" mesh_file="${mesh_file}" count="${count-1}" iter="${iter+1}"/>
+    </xacro:if>
+</xacro:macro>
+
+<xacro:macro name="spawn_chess_pieces" params="side">
+  <xacro:add_piece_loop base_name="pawn" count="8" side="${side}" mesh_file="meshes/chess_pieces/rotated/pawn.stl"/>
+  <xacro:add_piece_loop base_name="rook" count="2" side="${side}" mesh_file="meshes/chess_pieces/rotated/rook.stl"/>
+  <xacro:add_piece_loop base_name="knight" count="2" side="${side}" mesh_file="meshes/chess_pieces/rotated/knight.stl"/>
+  <xacro:add_piece_loop base_name="bishop" count="2" side="${side}" mesh_file="meshes/chess_pieces/rotated/bishop.stl"/>
+  <xacro:add_piece_loop base_name="queen" count="1" side="${side}" mesh_file="meshes/chess_pieces/rotated/queen.stl"/>
+  <xacro:add_piece_loop base_name="king" count="1" side="${side}" mesh_file="meshes/chess_pieces/rotated/king.stl"/>
+</xacro:macro>
+
+<xacro:spawn_chess_pieces side="white"/>
+<xacro:spawn_chess_pieces side="black"/>
+
+</robot>

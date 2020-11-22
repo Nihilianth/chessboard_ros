@@ -1,0 +1,31 @@
+<launch>
+
+<!--node pkg="tf" type="static_transform_publisher" name="homing_pos_broadcaster" args="0.123 -0.1045 0.0695 3.14159 0 1.570796 base_link home_link 500" /-->
+<node pkg="tf" type="static_transform_publisher" name="homing_pos_broadcaster" args="0.123 -0.1045 0.05875 3.14159 0 1.570796 base_link home_link 500" />
+<node pkg="tf" type="static_transform_publisher" name="eef_broadcaster" args="-0.022 0.040483 -0.025 0.0 0.0 0.0 x_link_1 end_effector_1 500" />
+<node pkg="tf" type="static_transform_publisher" name="frame_broadcaster" args="0.0 0.0 0.0 0.0 0.0 1.57 base_link frame_link 500" />
+<node pkg="tf" type="static_transform_publisher" name="board_top_broadcaster" args="0.12 0.038 0.12 0.0 0.0 0.0 home_link board_top_link 500" />
+
+<node pkg="chessboard_robot" type="chessboard_robot_node" name="chessboard_robot_node1" args="" />
+<node pkg="chessboard_chesspieces" type="chessboard_chesspieces_node" name="chessboard_chesspieces_node1" args="" />
+
+
+<arg default="$(find chessboard_urdf_description)/urdf/chessboard_urdf.xacro" name="model"/>
+<arg default="true" name="gui"/>
+<arg default="$(find chessboard_urdf_description)/launch/urdf.rviz" name="rvizconfig"/>
+<param command="$(find xacro)/xacro $(arg model)" name="robot_description"/>
+<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+<node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"/>
+<!--node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/-->
+<node args="-d $(arg rvizconfig)" name="rviz" pkg="rviz" required="true" type="rviz"/>
+
+
+<!--node pkg="tf" type="static_transform_publisher" name="y_pos_broadcaster" args="-0.301 0.132 -0.011 0.0 0.0 0.0 y_link_1_home y_link_1 500" />
+<node pkg="tf" type="static_transform_publisher" name="x_pos_broadcaster" args="-0.123 0.132 -0.011 0.0 0.0 0.0 magnet_link_1_home magnet_link_1 500" /-->
+
+<!--node pkg="tf" type="static_transform_publisher" name="homing_pos_broadcaster" args="0.0 0.0 0.0 0.0 0.0 0.0 base_link home_link 500" />
+<node pkg="tf" type="static_transform_publisher" name="y_pos_broadcaster" args="0.0 0.0 0.0 0.0 0.0 0.0 y_link_1_home y_link_1 500" />
+<node pkg="tf" type="static_transform_publisher" name="x_pos_broadcaster" args="0.0 0.0 0.0 0.0 0.0 0.0 magnet_link_1_home magnet_link_1 500" /-->
+<!-- OLD node pkg="tf" type="static_transform_publisher" name="eef_broadcaster" args="-0.022 0.025 0.040483 0.0 0.0 0.0 x_link_1 end_effector_1 500" /-->
+
+</launch>
