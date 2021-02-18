@@ -49,8 +49,8 @@ int main(int argc, char** argv) {
     // XZ plane
        // EEF position
         eef.header.stamp = ros::Time::now();
-        eef.transform.translation.x = (0.12 + cos(angle)*0.09);
-        eef.transform.translation.z = (0.12 + sin(angle)*0.09);
+        eef.transform.translation.x = 0.0;//(0.12 + cos(angle)*0.09);
+        eef.transform.translation.z = 0.0;//(0.12 + sin(angle)*0.09);
         eef.transform.translation.y = 0;
         eef.transform.rotation = tf::createQuaternionMsgFromYaw(0);
        // Calculate X

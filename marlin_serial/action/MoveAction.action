@@ -1,0 +1,7 @@
+#goal
+int32[] target
+---
+#result
+---
+#feedback
+int32[] cur_pos

@@ -7,4 +7,5 @@
     <param name="stdin" type="String" value="stockfish/stdin"/>
 </node>
 
+<node pkg="chessboard_uci" type="chessboard_uci_node.py" name="chessboard_uci_node" output="screen"/>
 </launch>

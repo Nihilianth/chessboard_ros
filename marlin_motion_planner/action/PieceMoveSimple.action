@@ -1,0 +1,10 @@
+#goal
+float32[] source
+float32[] target
+bool isTrivial
+---
+#result
+---
+#feedback
+int32[] cur_pos
+int32 state

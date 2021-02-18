@@ -11,6 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   tf
+  marlin_serial
+  marlin_motion_planner
 )
 
 ## System dependencies are found with CMake's conventions

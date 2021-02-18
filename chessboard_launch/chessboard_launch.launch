@@ -8,6 +8,7 @@
 
 <node pkg="chessboard_robot" type="chessboard_robot_node" name="chessboard_robot_node1" args="" />
 <node pkg="chessboard_chesspieces" type="chessboard_chesspieces_node" name="chessboard_chesspieces_node1" args="" />
+<include file="$(find chessboard_uci)/launch/chessboard_uci_stockfish.launch"/>
 
 
 <arg default="$(find chessboard_urdf_description)/urdf/chessboard_urdf.xacro" name="model"/>

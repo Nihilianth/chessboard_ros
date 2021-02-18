@@ -1,0 +1,8 @@
+#goal
+int32[] source
+---
+#result
+---
+#feedback
+int32[] cur_pos
+int32 state

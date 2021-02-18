@@ -6,7 +6,6 @@ import rospy
 import std_msgs
 from chessboard_uci.msg import ucicommandGoal
 
-
 class UCIAction(object):
     _feedback = chessboard_uci.msg.ucicommandFeedback()
     _result = chessboard_uci.msg.ucicommandResult()
@@ -16,14 +15,14 @@ class UCIAction(object):
     
 
     def stockfish_cb(self, data):
-        rospy.logdebug(rospy.get_caller_id() + ' got data %s', data.data)
+        rospy.loginfo(rospy.get_caller_id() + ' got data %s', data.data)
         if self._cur_goal.cmd == -1:
             rospy.loginfo('No goal is set')
             return
 
         # remove endline
         data.data = data.data.rstrip()
-        #rospy.loginfo('CMD: %u', self._cur_goal.cmd)
+        rospy.loginfo('CMD: %u', self._cur_goal.cmd)
         if self._cur_goal.cmd == ucicommandGoal.CMD_INIT:
             if data.data == 'uciok':
                 self._stockfish_pub.publish('isready\n')
@@ -75,15 +74,19 @@ class UCIAction(object):
             self._stockfish_pub.publish('uci\n')
 
         elif goal.cmd == ucicommandGoal.CMD_NEWGAME:
-            # clead movehistory
+            rospy.loginfo("CMD_NEWGAME")
+            self._move_history = []
             self._stockfish_pub.publish('ucinewgame\n')
+            #self._stockfish_pub.publish('position startpos\n')
             self._success = True
 
         elif goal.cmd == ucicommandGoal.CMD_CALC_MOVE:
+            rospy.loginfo("CMD_CALC_MOVE")
             self._stockfish_pub.publish('go\n')
-            self._success = True
+            #self._success = True
 
         elif goal.cmd == ucicommandGoal.CMD_MOVE:
+            rospy.loginfo("CMD_MOVE")
             # convert coords
             if len(self._move_history) == 0:
                 rospy.loginfo('no positions to send')

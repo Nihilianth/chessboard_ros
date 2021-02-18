@@ -4,7 +4,12 @@
 #include <ros/time.h>
 #include <sensor_msgs/JointState.h>
 #include <tf/transform_broadcaster.h>
+#include <actionlib/server/simple_action_server.h>
+#include <actionlib/client/simple_action_client.h>
 #include "chessboard_chesspieces/chessboard_chesspieces.h"
+#include "marlin_serial/MoveActionAction.h"
+#include "marlin_serial/ResetAction.h"
+#include "marlin_motion_planner/PieceMoveAction.h"
 
 namespace chessboard
 {
@@ -71,6 +76,133 @@ geometry_msgs::Vector3 GetPieceTransform(const ChessPiece * piece)
     return translation;
 }
 
+class MoveAction
+{
+    protected:
+        ros::NodeHandle nh_;
+        actionlib::SimpleActionServer<marlin_serial::MoveActionAction> as_; // NodeHandle instance must be created before this line. Otherwise strange error occurs.
+        actionlib::SimpleActionClient<marlin_motion_planner::PieceMoveAction> ac_;
+        std::string action_name_;
+
+        marlin_serial::MoveActionActionFeedback feedback_;
+        marlin_serial::MoveActionActionResult result_;
+        std::vector<ChessPiece> &pieces_;
+
+    public:
+        MoveAction(std::string name, std::vector<ChessPiece> &pieces) : as_(nh_, name, boost::bind(&MoveAction::executeCB, this, _1), false),
+                                            action_name_(name), pieces_(pieces), ac_("planner_move", true)
+        {
+            as_.start();
+        }
+
+        ~MoveAction(void)
+        {
+        }
+
+        void executeCB(const marlin_serial::MoveActionGoalConstPtr &goal)
+        {
+            //!TODO: param!
+            float board_square_size = 0.03f; // m
+            ros::Rate r(10);
+            bool success = true;
+            // srcx srcy destx desty
+
+            auto activePiece = std::find_if(pieces_.begin(), pieces_.end(), [&goal](const chessboard::ChessPiece &piece) {
+                return piece.x_pos == goal->target[0] &&
+                piece.y_pos == goal->target[1];
+            });
+            auto targetPiece = std::find_if(pieces_.begin(), pieces_.end(), [&goal](const chessboard::ChessPiece &piece) {
+                return piece.x_pos == goal->target[2] &&
+                piece.y_pos == goal->target[3];
+            });
+
+            if (activePiece == pieces_.end())
+                success = false;
+
+
+            if (targetPiece != pieces_.end())
+            {
+                // hit another piece
+                float offset = (targetPiece->GetSide() == chessboard::ChessPiece::SIDE_WHITE) ? -30.f : 30*9.f;
+
+                if (success)
+                {
+                    // TODO: find free slot, move it there
+                    marlin_motion_planner::PieceMoveGoal mpGoal;
+                    //std::vector<float> src = {targetPiece->x_pos * board_square_size, targetPiece->y_pos * board_square_size};
+                    //std::vector<float> tgt = {board_square_size * 9, 0};
+                    mpGoal.source = {targetPiece->x_pos * board_square_size, targetPiece->y_pos * board_square_size};
+                    mpGoal.target = {board_square_size * 9, 0};
+                    ac_.sendGoal(mpGoal);
+                }
+
+                targetPiece->x_pos = offset;
+                targetPiece->y_pos = 30.0f;
+            }
+
+
+            if (success)
+            {
+
+                marlin_motion_planner::PieceMoveGoal mpGoal;
+                mpGoal.source = {activePiece->x_pos * board_square_size, activePiece->y_pos * board_square_size};
+
+                activePiece->x_pos = goal->target[2];
+                activePiece->y_pos = goal->target[3];
+
+                mpGoal.target = {activePiece->x_pos * board_square_size, activePiece->y_pos * board_square_size};
+                ac_.sendGoal(mpGoal);
+                ac_.waitForResult();
+
+                //result_.sequence = feedback_.sequence;
+                ROS_INFO("%s: Succeeded", action_name_.c_str());
+                // set the action state to succeeded
+                as_.setSucceeded();
+            }
+        }
+};
+
+class ResetAction
+{
+    protected:
+        ros::NodeHandle nh_;
+        actionlib::SimpleActionServer<marlin_serial::ResetAction> as_; // NodeHandle instance must be created before this line. Otherwise strange error occurs.
+        std::string action_name_;
+
+        marlin_serial::ResetActionFeedback feedback_;
+        marlin_serial::ResetActionResult result_;
+        std::vector<ChessPiece> &pieces_;
+
+    public:
+        ResetAction(std::string name, std::vector<ChessPiece> &pieces) : as_(nh_, name, boost::bind(&ResetAction::executeCB, this, _1), false),
+                                            action_name_(name), pieces_(pieces)
+        {
+            as_.start();
+        }
+
+        ~ResetAction(void)
+        {
+        }
+
+        void executeCB(const marlin_serial::ResetGoalConstPtr &goal)
+        {
+            ros::Rate r();
+            bool success = true;
+            // srcx srcy destx desty
+
+            pieces_ = InitChessPieces();
+
+            if (success)
+            {
+                //result_.sequence = feedback_.sequence;
+                ROS_INFO("%s: Succeeded", action_name_.c_str());
+                // set the action state to succeeded
+                as_.setSucceeded();
+            }
+        }
+};
+
+
 int main (int argc, char ** argv)
 {
     ros::init(argc, argv, "chessboard_chesspieces_node");
@@ -96,11 +228,14 @@ int main (int argc, char ** argv)
     });
 
     // test
-    if (firstPawn != pieces.end())
-        firstPawn->SetActive(true);
+    //if (firstPawn != pieces.end())
+    //    firstPawn->SetActive(true);
 
 
     std::vector<geometry_msgs::TransformStamped> pieceTransforms;
+
+    MoveAction move_action("chessboard_chesspieces_node", pieces);
+    ResetAction reset_action("chessboard_chesspieces_reset", pieces);
 
     while (ros::ok())
     {
@@ -136,6 +271,7 @@ int main (int argc, char ** argv)
         pieceTransforms.clear();
         
 
+        ros::spinOnce();
         loop_rate.sleep();
     }
     return 1;
