@@ -15,14 +15,14 @@ class UCIAction(object):
     
 
     def stockfish_cb(self, data):
-        rospy.loginfo(rospy.get_caller_id() + ' got data %s', data.data)
+        #rospy.loginfo(rospy.get_caller_id() + ' got data %s', data.data)
         if self._cur_goal.cmd == -1:
             rospy.loginfo('No goal is set')
             return
 
         # remove endline
         data.data = data.data.rstrip()
-        rospy.loginfo('CMD: %u', self._cur_goal.cmd)
+        #rospy.loginfo('CMD: %u', self._cur_goal.cmd)
         if self._cur_goal.cmd == ucicommandGoal.CMD_INIT:
             if data.data == 'uciok':
                 self._stockfish_pub.publish('isready\n')
@@ -65,7 +65,7 @@ class UCIAction(object):
         r = rospy.Rate(1)
         self._success = False
 
-        rospy.loginfo('executing action %u', goal.cmd)
+        #rospy.loginfo('executing action %u', goal.cmd)
         self._cur_goal = goal
 
 
@@ -94,7 +94,7 @@ class UCIAction(object):
             else:
                 uci_position_str = 'position startpos moves '
                 uci_position_str += ' '.join(self._move_history) + '\n'
-                rospy.loginfo(uci_position_str)
+                #rospy.loginfo(uci_position_str)
                 self._stockfish_pub.publish(uci_position_str)
                 self._success = True
 

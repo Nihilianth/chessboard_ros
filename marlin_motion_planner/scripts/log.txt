@@ -1,0 +1,1453 @@
+0 0
+neighbor search for : 0 0
+[(0, 1), (1, 0), (1, 1)]
+neighbor: 0 1
+1.1
+inf
+neighbor: 1 0
+1.1
+inf
+neighbor: 1 1
+1.51421356237
+inf
+0 1
+neighbor search for : 0 1
+[(0, 0), (0, 2), (1, 0), (1, 1), (1, 2)]
+neighbor: 0 0
+2.2
+0
+neighbor: 0 2
+2.2
+inf
+neighbor: 1 0
+2.61421356237
+1.1
+neighbor: 1 1
+2.2
+1.51421356237
+neighbor: 1 2
+2.61421356237
+inf
+7 6
+neighbor search for : 7 6
+[(6, 5), (6, 6), (6, 7), (7, 5), (7, 7)]
+neighbor: 6 5
+inf
+inf
+neighbor: 6 6
+inf
+inf
+neighbor: 6 7
+inf
+inf
+neighbor: 7 5
+inf
+inf
+neighbor: 7 7
+inf
+inf
+0 2
+neighbor search for : 0 2
+[(0, 1), (0, 3), (1, 1), (1, 2), (1, 3)]
+neighbor: 0 1
+3.3
+1.1
+neighbor: 0 3
+3.3
+inf
+neighbor: 1 1
+3.71421356237
+1.51421356237
+neighbor: 1 2
+3.3
+2.61421356237
+neighbor: 1 3
+3.71421356237
+inf
+7 4
+neighbor search for : 7 4
+[(6, 3), (6, 4), (6, 5), (7, 3), (7, 5)]
+neighbor: 6 3
+inf
+inf
+neighbor: 6 4
+inf
+inf
+neighbor: 6 5
+inf
+inf
+neighbor: 7 3
+inf
+inf
+neighbor: 7 5
+inf
+inf
+7 3
+neighbor search for : 7 3
+[(6, 2), (6, 3), (6, 4), (7, 2), (7, 4)]
+neighbor: 6 2
+inf
+inf
+neighbor: 6 3
+inf
+inf
+neighbor: 6 4
+inf
+inf
+neighbor: 7 2
+inf
+inf
+neighbor: 7 4
+inf
+inf
+7 2
+neighbor search for : 7 2
+[(6, 1), (6, 2), (6, 3), (7, 1), (7, 3)]
+neighbor: 6 1
+inf
+inf
+neighbor: 6 2
+inf
+inf
+neighbor: 6 3
+inf
+inf
+neighbor: 7 1
+inf
+inf
+neighbor: 7 3
+inf
+inf
+7 1
+neighbor search for : 7 1
+[(6, 0), (6, 1), (6, 2), (7, 0), (7, 2)]
+neighbor: 6 0
+inf
+inf
+neighbor: 6 1
+inf
+inf
+neighbor: 6 2
+inf
+inf
+neighbor: 7 0
+inf
+inf
+neighbor: 7 2
+inf
+inf
+7 0
+neighbor search for : 7 0
+[(6, 0), (6, 1), (7, 1)]
+neighbor: 6 0
+inf
+inf
+neighbor: 6 1
+inf
+inf
+neighbor: 7 1
+inf
+inf
+6 7
+neighbor search for : 6 7
+[(5, 6), (5, 7), (6, 6), (7, 6), (7, 7)]
+neighbor: 5 6
+inf
+inf
+neighbor: 5 7
+inf
+inf
+neighbor: 6 6
+inf
+inf
+neighbor: 7 6
+inf
+inf
+neighbor: 7 7
+inf
+inf
+6 6
+neighbor search for : 6 6
+[(5, 5), (5, 6), (5, 7), (6, 5), (6, 7), (7, 5), (7, 6), (7, 7)]
+neighbor: 5 5
+inf
+inf
+neighbor: 5 6
+inf
+inf
+neighbor: 5 7
+inf
+inf
+neighbor: 6 5
+inf
+inf
+neighbor: 6 7
+inf
+inf
+neighbor: 7 5
+inf
+inf
+neighbor: 7 6
+inf
+inf
+neighbor: 7 7
+inf
+inf
+6 5
+neighbor search for : 6 5
+[(5, 4), (5, 5), (5, 6), (6, 4), (6, 6), (7, 4), (7, 5), (7, 6)]
+neighbor: 5 4
+inf
+inf
+neighbor: 5 5
+inf
+inf
+neighbor: 5 6
+inf
+inf
+neighbor: 6 4
+inf
+inf
+neighbor: 6 6
+inf
+inf
+neighbor: 7 4
+inf
+inf
+neighbor: 7 5
+inf
+inf
+neighbor: 7 6
+inf
+inf
+6 4
+neighbor search for : 6 4
+[(5, 3), (5, 4), (5, 5), (6, 3), (6, 5), (7, 3), (7, 4), (7, 5)]
+neighbor: 5 3
+inf
+inf
+neighbor: 5 4
+inf
+inf
+neighbor: 5 5
+inf
+inf
+neighbor: 6 3
+inf
+inf
+neighbor: 6 5
+inf
+inf
+neighbor: 7 3
+inf
+inf
+neighbor: 7 4
+inf
+inf
+neighbor: 7 5
+inf
+inf
+6 3
+neighbor search for : 6 3
+[(5, 2), (5, 3), (5, 4), (6, 2), (6, 4), (7, 2), (7, 3), (7, 4)]
+neighbor: 5 2
+inf
+inf
+neighbor: 5 3
+inf
+inf
+neighbor: 5 4
+inf
+inf
+neighbor: 6 2
+inf
+inf
+neighbor: 6 4
+inf
+inf
+neighbor: 7 2
+inf
+inf
+neighbor: 7 3
+inf
+inf
+neighbor: 7 4
+inf
+inf
+6 2
+neighbor search for : 6 2
+[(5, 1), (5, 2), (5, 3), (6, 1), (6, 3), (7, 1), (7, 2), (7, 3)]
+neighbor: 5 1
+inf
+inf
+neighbor: 5 2
+inf
+inf
+neighbor: 5 3
+inf
+inf
+neighbor: 6 1
+inf
+inf
+neighbor: 6 3
+inf
+inf
+neighbor: 7 1
+inf
+inf
+neighbor: 7 2
+inf
+inf
+neighbor: 7 3
+inf
+inf
+6 1
+neighbor search for : 6 1
+[(5, 0), (5, 1), (5, 2), (6, 0), (6, 2), (7, 0), (7, 1), (7, 2)]
+neighbor: 5 0
+inf
+inf
+neighbor: 5 1
+inf
+inf
+neighbor: 5 2
+inf
+inf
+neighbor: 6 0
+inf
+inf
+neighbor: 6 2
+inf
+inf
+neighbor: 7 0
+inf
+inf
+neighbor: 7 1
+inf
+inf
+neighbor: 7 2
+inf
+inf
+6 0
+neighbor search for : 6 0
+[(5, 0), (5, 1), (6, 1), (7, 0), (7, 1)]
+neighbor: 5 0
+inf
+inf
+neighbor: 5 1
+inf
+inf
+neighbor: 6 1
+inf
+inf
+neighbor: 7 0
+inf
+inf
+neighbor: 7 1
+inf
+inf
+5 7
+neighbor search for : 5 7
+[(4, 6), (4, 7), (5, 6), (6, 6), (6, 7)]
+neighbor: 4 6
+inf
+inf
+neighbor: 4 7
+inf
+inf
+neighbor: 5 6
+inf
+inf
+neighbor: 6 6
+inf
+inf
+neighbor: 6 7
+inf
+inf
+5 6
+neighbor search for : 5 6
+[(4, 5), (4, 6), (4, 7), (5, 5), (5, 7), (6, 5), (6, 6), (6, 7)]
+neighbor: 4 5
+inf
+inf
+neighbor: 4 6
+inf
+inf
+neighbor: 4 7
+inf
+inf
+neighbor: 5 5
+inf
+inf
+neighbor: 5 7
+inf
+inf
+neighbor: 6 5
+inf
+inf
+neighbor: 6 6
+inf
+inf
+neighbor: 6 7
+inf
+inf
+5 5
+neighbor search for : 5 5
+[(4, 4), (4, 5), (4, 6), (5, 4), (5, 6), (6, 4), (6, 5), (6, 6)]
+neighbor: 4 4
+inf
+inf
+neighbor: 4 5
+inf
+inf
+neighbor: 4 6
+inf
+inf
+neighbor: 5 4
+inf
+inf
+neighbor: 5 6
+inf
+inf
+neighbor: 6 4
+inf
+inf
+neighbor: 6 5
+inf
+inf
+neighbor: 6 6
+inf
+inf
+5 4
+neighbor search for : 5 4
+[(4, 3), (4, 4), (4, 5), (5, 3), (5, 5), (6, 3), (6, 4), (6, 5)]
+neighbor: 4 3
+inf
+inf
+neighbor: 4 4
+inf
+inf
+neighbor: 4 5
+inf
+inf
+neighbor: 5 3
+inf
+inf
+neighbor: 5 5
+inf
+inf
+neighbor: 6 3
+inf
+inf
+neighbor: 6 4
+inf
+inf
+neighbor: 6 5
+inf
+inf
+5 3
+neighbor search for : 5 3
+[(4, 2), (4, 3), (4, 4), (5, 2), (5, 4), (6, 2), (6, 3), (6, 4)]
+neighbor: 4 2
+inf
+inf
+neighbor: 4 3
+inf
+inf
+neighbor: 4 4
+inf
+inf
+neighbor: 5 2
+inf
+inf
+neighbor: 5 4
+inf
+inf
+neighbor: 6 2
+inf
+inf
+neighbor: 6 3
+inf
+inf
+neighbor: 6 4
+inf
+inf
+5 2
+neighbor search for : 5 2
+[(4, 1), (4, 2), (4, 3), (5, 1), (5, 3), (6, 1), (6, 2), (6, 3)]
+neighbor: 4 1
+inf
+inf
+neighbor: 4 2
+inf
+inf
+neighbor: 4 3
+inf
+inf
+neighbor: 5 1
+inf
+inf
+neighbor: 5 3
+inf
+inf
+neighbor: 6 1
+inf
+inf
+neighbor: 6 2
+inf
+inf
+neighbor: 6 3
+inf
+inf
+5 1
+neighbor search for : 5 1
+[(4, 0), (4, 1), (4, 2), (5, 0), (5, 2), (6, 0), (6, 1), (6, 2)]
+neighbor: 4 0
+inf
+inf
+neighbor: 4 1
+inf
+inf
+neighbor: 4 2
+inf
+inf
+neighbor: 5 0
+inf
+inf
+neighbor: 5 2
+inf
+inf
+neighbor: 6 0
+inf
+inf
+neighbor: 6 1
+inf
+inf
+neighbor: 6 2
+inf
+inf
+5 0
+neighbor search for : 5 0
+[(4, 0), (4, 1), (5, 1), (6, 0), (6, 1)]
+neighbor: 4 0
+inf
+inf
+neighbor: 4 1
+inf
+inf
+neighbor: 5 1
+inf
+inf
+neighbor: 6 0
+inf
+inf
+neighbor: 6 1
+inf
+inf
+4 7
+neighbor search for : 4 7
+[(3, 6), (3, 7), (4, 6), (5, 6), (5, 7)]
+neighbor: 3 6
+inf
+inf
+neighbor: 3 7
+inf
+inf
+neighbor: 4 6
+inf
+inf
+neighbor: 5 6
+inf
+inf
+neighbor: 5 7
+inf
+inf
+4 6
+neighbor search for : 4 6
+[(3, 5), (3, 6), (3, 7), (4, 5), (4, 7), (5, 5), (5, 6), (5, 7)]
+neighbor: 3 5
+inf
+inf
+neighbor: 3 6
+inf
+inf
+neighbor: 3 7
+inf
+inf
+neighbor: 4 5
+inf
+inf
+neighbor: 4 7
+inf
+inf
+neighbor: 5 5
+inf
+inf
+neighbor: 5 6
+inf
+inf
+neighbor: 5 7
+inf
+inf
+4 5
+neighbor search for : 4 5
+[(3, 4), (3, 5), (3, 6), (4, 4), (4, 6), (5, 4), (5, 5), (5, 6)]
+neighbor: 3 4
+inf
+inf
+neighbor: 3 5
+inf
+inf
+neighbor: 3 6
+inf
+inf
+neighbor: 4 4
+inf
+inf
+neighbor: 4 6
+inf
+inf
+neighbor: 5 4
+inf
+inf
+neighbor: 5 5
+inf
+inf
+neighbor: 5 6
+inf
+inf
+4 4
+neighbor search for : 4 4
+[(3, 3), (3, 4), (3, 5), (4, 3), (4, 5), (5, 3), (5, 4), (5, 5)]
+neighbor: 3 3
+inf
+inf
+neighbor: 3 4
+inf
+inf
+neighbor: 3 5
+inf
+inf
+neighbor: 4 3
+inf
+inf
+neighbor: 4 5
+inf
+inf
+neighbor: 5 3
+inf
+inf
+neighbor: 5 4
+inf
+inf
+neighbor: 5 5
+inf
+inf
+4 3
+neighbor search for : 4 3
+[(3, 2), (3, 3), (3, 4), (4, 2), (4, 4), (5, 2), (5, 3), (5, 4)]
+neighbor: 3 2
+inf
+inf
+neighbor: 3 3
+inf
+inf
+neighbor: 3 4
+inf
+inf
+neighbor: 4 2
+inf
+inf
+neighbor: 4 4
+inf
+inf
+neighbor: 5 2
+inf
+inf
+neighbor: 5 3
+inf
+inf
+neighbor: 5 4
+inf
+inf
+4 2
+neighbor search for : 4 2
+[(3, 1), (3, 2), (3, 3), (4, 1), (4, 3), (5, 1), (5, 2), (5, 3)]
+neighbor: 3 1
+inf
+inf
+neighbor: 3 2
+inf
+inf
+neighbor: 3 3
+inf
+inf
+neighbor: 4 1
+inf
+inf
+neighbor: 4 3
+inf
+inf
+neighbor: 5 1
+inf
+inf
+neighbor: 5 2
+inf
+inf
+neighbor: 5 3
+inf
+inf
+4 1
+neighbor search for : 4 1
+[(3, 0), (3, 1), (3, 2), (4, 0), (4, 2), (5, 0), (5, 1), (5, 2)]
+neighbor: 3 0
+inf
+inf
+neighbor: 3 1
+inf
+inf
+neighbor: 3 2
+inf
+inf
+neighbor: 4 0
+inf
+inf
+neighbor: 4 2
+inf
+inf
+neighbor: 5 0
+inf
+inf
+neighbor: 5 1
+inf
+inf
+neighbor: 5 2
+inf
+inf
+4 0
+neighbor search for : 4 0
+[(3, 0), (3, 1), (4, 1), (5, 0), (5, 1)]
+neighbor: 3 0
+inf
+inf
+neighbor: 3 1
+inf
+inf
+neighbor: 4 1
+inf
+inf
+neighbor: 5 0
+inf
+inf
+neighbor: 5 1
+inf
+inf
+3 7
+neighbor search for : 3 7
+[(2, 6), (2, 7), (3, 6), (4, 6), (4, 7)]
+neighbor: 2 6
+inf
+inf
+neighbor: 2 7
+inf
+inf
+neighbor: 3 6
+inf
+inf
+neighbor: 4 6
+inf
+inf
+neighbor: 4 7
+inf
+inf
+3 6
+neighbor search for : 3 6
+[(2, 5), (2, 6), (2, 7), (3, 5), (3, 7), (4, 5), (4, 6), (4, 7)]
+neighbor: 2 5
+inf
+inf
+neighbor: 2 6
+inf
+inf
+neighbor: 2 7
+inf
+inf
+neighbor: 3 5
+inf
+inf
+neighbor: 3 7
+inf
+inf
+neighbor: 4 5
+inf
+inf
+neighbor: 4 6
+inf
+inf
+neighbor: 4 7
+inf
+inf
+3 5
+neighbor search for : 3 5
+[(2, 4), (2, 5), (2, 6), (3, 4), (3, 6), (4, 4), (4, 5), (4, 6)]
+neighbor: 2 4
+inf
+inf
+neighbor: 2 5
+inf
+inf
+neighbor: 2 6
+inf
+inf
+neighbor: 3 4
+inf
+inf
+neighbor: 3 6
+inf
+inf
+neighbor: 4 4
+inf
+inf
+neighbor: 4 5
+inf
+inf
+neighbor: 4 6
+inf
+inf
+3 4
+neighbor search for : 3 4
+[(2, 3), (2, 4), (2, 5), (3, 3), (3, 5), (4, 3), (4, 4), (4, 5)]
+neighbor: 2 3
+inf
+inf
+neighbor: 2 4
+inf
+inf
+neighbor: 2 5
+inf
+inf
+neighbor: 3 3
+inf
+inf
+neighbor: 3 5
+inf
+inf
+neighbor: 4 3
+inf
+inf
+neighbor: 4 4
+inf
+inf
+neighbor: 4 5
+inf
+inf
+3 3
+neighbor search for : 3 3
+[(2, 2), (2, 3), (2, 4), (3, 2), (3, 4), (4, 2), (4, 3), (4, 4)]
+neighbor: 2 2
+inf
+inf
+neighbor: 2 3
+inf
+inf
+neighbor: 2 4
+inf
+inf
+neighbor: 3 2
+inf
+inf
+neighbor: 3 4
+inf
+inf
+neighbor: 4 2
+inf
+inf
+neighbor: 4 3
+inf
+inf
+neighbor: 4 4
+inf
+inf
+3 2
+neighbor search for : 3 2
+[(2, 1), (2, 2), (2, 3), (3, 1), (3, 3), (4, 1), (4, 2), (4, 3)]
+neighbor: 2 1
+inf
+inf
+neighbor: 2 2
+inf
+inf
+neighbor: 2 3
+inf
+inf
+neighbor: 3 1
+inf
+inf
+neighbor: 3 3
+inf
+inf
+neighbor: 4 1
+inf
+inf
+neighbor: 4 2
+inf
+inf
+neighbor: 4 3
+inf
+inf
+3 1
+neighbor search for : 3 1
+[(2, 0), (2, 1), (2, 2), (3, 0), (3, 2), (4, 0), (4, 1), (4, 2)]
+neighbor: 2 0
+inf
+inf
+neighbor: 2 1
+inf
+inf
+neighbor: 2 2
+inf
+inf
+neighbor: 3 0
+inf
+inf
+neighbor: 3 2
+inf
+inf
+neighbor: 4 0
+inf
+inf
+neighbor: 4 1
+inf
+inf
+neighbor: 4 2
+inf
+inf
+3 0
+neighbor search for : 3 0
+[(2, 0), (2, 1), (3, 1), (4, 0), (4, 1)]
+neighbor: 2 0
+inf
+inf
+neighbor: 2 1
+inf
+inf
+neighbor: 3 1
+inf
+inf
+neighbor: 4 0
+inf
+inf
+neighbor: 4 1
+inf
+inf
+2 7
+neighbor search for : 2 7
+[(1, 6), (1, 7), (2, 6), (3, 6), (3, 7)]
+neighbor: 1 6
+inf
+inf
+neighbor: 1 7
+inf
+inf
+neighbor: 2 6
+inf
+inf
+neighbor: 3 6
+inf
+inf
+neighbor: 3 7
+inf
+inf
+2 6
+neighbor search for : 2 6
+[(1, 5), (1, 6), (1, 7), (2, 5), (2, 7), (3, 5), (3, 6), (3, 7)]
+neighbor: 1 5
+inf
+inf
+neighbor: 1 6
+inf
+inf
+neighbor: 1 7
+inf
+inf
+neighbor: 2 5
+inf
+inf
+neighbor: 2 7
+inf
+inf
+neighbor: 3 5
+inf
+inf
+neighbor: 3 6
+inf
+inf
+neighbor: 3 7
+inf
+inf
+2 5
+neighbor search for : 2 5
+[(1, 4), (1, 5), (1, 6), (2, 4), (2, 6), (3, 4), (3, 5), (3, 6)]
+neighbor: 1 4
+inf
+inf
+neighbor: 1 5
+inf
+inf
+neighbor: 1 6
+inf
+inf
+neighbor: 2 4
+inf
+inf
+neighbor: 2 6
+inf
+inf
+neighbor: 3 4
+inf
+inf
+neighbor: 3 5
+inf
+inf
+neighbor: 3 6
+inf
+inf
+2 4
+neighbor search for : 2 4
+[(1, 3), (1, 4), (1, 5), (2, 3), (2, 5), (3, 3), (3, 4), (3, 5)]
+neighbor: 1 3
+inf
+3.71421356237
+neighbor: 1 4
+inf
+inf
+neighbor: 1 5
+inf
+inf
+neighbor: 2 3
+inf
+inf
+neighbor: 2 5
+inf
+inf
+neighbor: 3 3
+inf
+inf
+neighbor: 3 4
+inf
+inf
+neighbor: 3 5
+inf
+inf
+2 3
+neighbor search for : 2 3
+[(1, 2), (1, 3), (1, 4), (2, 2), (2, 4), (3, 2), (3, 3), (3, 4)]
+neighbor: 1 2
+inf
+2.61421356237
+neighbor: 1 3
+inf
+3.71421356237
+neighbor: 1 4
+inf
+inf
+neighbor: 2 2
+inf
+inf
+neighbor: 2 4
+inf
+inf
+neighbor: 3 2
+inf
+inf
+neighbor: 3 3
+inf
+inf
+neighbor: 3 4
+inf
+inf
+2 2
+neighbor search for : 2 2
+[(1, 1), (1, 2), (1, 3), (2, 1), (2, 3), (3, 1), (3, 2), (3, 3)]
+neighbor: 1 1
+inf
+1.51421356237
+neighbor: 1 2
+inf
+2.61421356237
+neighbor: 1 3
+inf
+3.71421356237
+neighbor: 2 1
+inf
+inf
+neighbor: 2 3
+inf
+inf
+neighbor: 3 1
+inf
+inf
+neighbor: 3 2
+inf
+inf
+neighbor: 3 3
+inf
+inf
+2 1
+neighbor search for : 2 1
+[(1, 0), (1, 1), (1, 2), (2, 0), (2, 2), (3, 0), (3, 1), (3, 2)]
+neighbor: 1 0
+inf
+1.1
+neighbor: 1 1
+inf
+1.51421356237
+neighbor: 1 2
+inf
+2.61421356237
+neighbor: 2 0
+inf
+inf
+neighbor: 2 2
+inf
+inf
+neighbor: 3 0
+inf
+inf
+neighbor: 3 1
+inf
+inf
+neighbor: 3 2
+inf
+inf
+2 0
+neighbor search for : 2 0
+[(1, 0), (1, 1), (2, 1), (3, 0), (3, 1)]
+neighbor: 1 0
+inf
+1.1
+neighbor: 1 1
+inf
+1.51421356237
+neighbor: 2 1
+inf
+inf
+neighbor: 3 0
+inf
+inf
+neighbor: 3 1
+inf
+inf
+1 7
+neighbor search for : 1 7
+[(0, 6), (0, 7), (1, 6), (2, 6), (2, 7)]
+neighbor: 0 6
+inf
+inf
+neighbor: 0 7
+inf
+inf
+neighbor: 1 6
+inf
+inf
+neighbor: 2 6
+inf
+inf
+neighbor: 2 7
+inf
+inf
+1 6
+neighbor search for : 1 6
+[(0, 5), (0, 6), (0, 7), (1, 5), (1, 7), (2, 5), (2, 6), (2, 7)]
+neighbor: 0 5
+inf
+inf
+neighbor: 0 6
+inf
+inf
+neighbor: 0 7
+inf
+inf
+neighbor: 1 5
+inf
+inf
+neighbor: 1 7
+inf
+inf
+neighbor: 2 5
+inf
+inf
+neighbor: 2 6
+inf
+inf
+neighbor: 2 7
+inf
+inf
+1 5
+neighbor search for : 1 5
+[(0, 4), (0, 5), (0, 6), (1, 4), (1, 6), (2, 4), (2, 5), (2, 6)]
+neighbor: 0 4
+inf
+inf
+neighbor: 0 5
+inf
+inf
+neighbor: 0 6
+inf
+inf
+neighbor: 1 4
+inf
+inf
+neighbor: 1 6
+inf
+inf
+neighbor: 2 4
+inf
+inf
+neighbor: 2 5
+inf
+inf
+neighbor: 2 6
+inf
+inf
+1 4
+neighbor search for : 1 4
+[(0, 3), (0, 4), (0, 5), (1, 3), (1, 5), (2, 3), (2, 4), (2, 5)]
+neighbor: 0 3
+inf
+3.3
+neighbor: 0 4
+inf
+inf
+neighbor: 0 5
+inf
+inf
+neighbor: 1 3
+inf
+3.71421356237
+neighbor: 1 5
+inf
+inf
+neighbor: 2 3
+inf
+inf
+neighbor: 2 4
+inf
+inf
+neighbor: 2 5
+inf
+inf
+1 3
+neighbor search for : 1 3
+[(0, 2), (0, 3), (0, 4), (1, 2), (1, 4), (2, 2), (2, 3), (2, 4)]
+neighbor: 0 2
+5.22842712475
+2.2
+neighbor: 0 3
+4.81421356237
+3.3
+neighbor: 0 4
+5.22842712475
+inf
+neighbor: 1 2
+4.81421356237
+2.61421356237
+neighbor: 1 4
+4.81421356237
+inf
+neighbor: 2 2
+5.22842712475
+inf
+neighbor: 2 3
+4.81421356237
+inf
+neighbor: 2 4
+5.22842712475
+inf
+1 2
+neighbor search for : 1 2
+[(0, 1), (0, 2), (0, 3), (1, 1), (1, 3), (2, 1), (2, 2), (2, 3)]
+neighbor: 0 1
+4.12842712475
+1.1
+neighbor: 0 2
+3.71421356237
+2.2
+neighbor: 0 3
+4.12842712475
+3.3
+neighbor: 1 1
+3.71421356237
+1.51421356237
+neighbor: 1 3
+3.71421356237
+3.71421356237
+neighbor: 2 1
+4.12842712475
+inf
+neighbor: 2 2
+3.71421356237
+5.22842712475
+neighbor: 2 3
+4.12842712475
+4.81421356237
+1 1
+neighbor search for : 1 1
+[(0, 0), (0, 1), (0, 2), (1, 0), (1, 2), (2, 0), (2, 1), (2, 2)]
+neighbor: 0 0
+3.02842712475
+0
+neighbor: 0 1
+2.61421356237
+1.1
+neighbor: 0 2
+3.02842712475
+2.2
+neighbor: 1 0
+2.61421356237
+1.1
+neighbor: 1 2
+2.61421356237
+2.61421356237
+neighbor: 2 0
+3.02842712475
+inf
+neighbor: 2 1
+2.61421356237
+4.12842712475
+neighbor: 2 2
+3.02842712475
+3.71421356237
+1 0
+neighbor search for : 1 0
+[(0, 0), (0, 1), (1, 1), (2, 0), (2, 1)]
+neighbor: 0 0
+2.2
+0
+neighbor: 0 1
+2.61421356237
+1.1
+neighbor: 1 1
+2.2
+1.51421356237
+neighbor: 2 0
+2.2
+3.02842712475
+neighbor: 2 1
+2.61421356237
+2.61421356237
+0 7
+neighbor search for : 0 7
+[(0, 6), (1, 6), (1, 7)]
+neighbor: 0 6
+inf
+inf
+neighbor: 1 6
+inf
+inf
+neighbor: 1 7
+inf
+inf
+0 6
+neighbor search for : 0 6
+[(0, 5), (0, 7), (1, 5), (1, 6), (1, 7)]
+neighbor: 0 5
+inf
+inf
+neighbor: 0 7
+inf
+inf
+neighbor: 1 5
+inf
+inf
+neighbor: 1 6
+inf
+inf
+neighbor: 1 7
+inf
+inf
+0 5
+neighbor search for : 0 5
+[(0, 4), (0, 6), (1, 4), (1, 5), (1, 6)]
+neighbor: 0 4
+inf
+5.22842712475
+neighbor: 0 6
+inf
+inf
+neighbor: 1 4
+inf
+4.81421356237
+neighbor: 1 5
+inf
+inf
+neighbor: 1 6
+inf
+inf
+0 4
+neighbor search for : 0 4
+[(0, 3), (0, 5), (1, 3), (1, 4), (1, 5)]
+neighbor: 0 3
+6.32842712475
+3.3
+neighbor: 0 5
+6.32842712475
+inf
+neighbor: 1 3
+6.74264068712
+3.71421356237
+neighbor: 1 4
+6.32842712475
+4.81421356237
+neighbor: 1 5
+6.74264068712
+inf
+0 3
+neighbor search for : 0 3
+[(0, 2), (0, 4), (1, 2), (1, 3), (1, 4)]
+neighbor: 0 2
+4.4
+2.2
+neighbor: 0 4
+4.4
+5.22842712475
+neighbor: 1 2
+4.81421356237
+2.61421356237
+neighbor: 1 3
+4.4
+3.71421356237
+neighbor: 1 4
+4.81421356237
+4.81421356237
+7 5
+neighbor search for : 7 5
+[(6, 4), (6, 5), (6, 6), (7, 4), (7, 6)]
+neighbor: 6 4
+inf
+inf
+neighbor: 6 5
+inf
+inf
+neighbor: 6 6
+inf
+inf
+neighbor: 7 4
+inf
+inf
+neighbor: 7 6
+inf
+inf
+7 7
+neighbor search for : 7 7
+[(6, 6), (6, 7), (7, 6)]
+neighbor: 6 6
+inf
+inf
+neighbor: 6 7
+inf
+inf
+neighbor: 7 6
+inf
+inf
+7 7 : None None

@@ -27,7 +27,7 @@ namespace chessboard
             CP_TOTAL
         };
 
-        ChessPiece(Sides side, PieceTypes type, int id, int pos_X, int pos_Y);
+        ChessPiece(uint64_t guid, Sides side, PieceTypes type, int id, int pos_X, int pos_Y);
 
         ~ChessPiece() {}
 
@@ -35,11 +35,15 @@ namespace chessboard
         const PieceTypes GetType() const { return _type; }
         const std::string GetTFName() const { return _tf_name; }
         const int GetId() const { return _tf_id; }
+        const int GetGUID() const { return guid; }
         const bool IsActive() const { return isActive; }
+        const bool IsDefeated() const { return isDefeated; }
+        void SetDefeated(bool defeated) { isDefeated = defeated; }
         void SetActive(bool newState) { isActive = newState; }
 
         int x_pos;
         int y_pos;
+        uint64_t guid;
     protected:
 
         //!TODO: Make xacro and this node fill the names from config
@@ -56,7 +60,7 @@ namespace chessboard
         int _tf_id;
         std::string _tf_name;
         bool isActive;
-
+        bool isDefeated;
     };
 
 }

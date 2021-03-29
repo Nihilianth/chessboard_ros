@@ -1,7 +1,8 @@
 #goal
-float32[] source
-float32[] target
+int32[] source
+int32[] target
 bool isTrivial
+BoardState state
 ---
 #result
 ---

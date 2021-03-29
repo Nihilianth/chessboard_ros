@@ -1,5 +1,7 @@
 #goal
 int32[] source
+int32[] target
+BoardState state
 ---
 #result
 ---

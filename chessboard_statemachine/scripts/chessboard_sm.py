@@ -60,7 +60,7 @@ def main():
 
         tutorial_it = Iterator(outcomes = ['succeeded','preempted','aborted'],
                                input_keys = [],
-                               it = lambda: range(0, 10),
+                               it = lambda: range(0, 2),
                                output_keys = [],
                                it_label = 'index',
                                exhausted_outcome = 'succeeded')
